@@ -336,18 +336,19 @@ legend {
 
 .header-home {
   border-bottom: 0.2rem solid var(--color-secondary);
+  background-color: var(--color-b);
   position: sticky;
   top: 0;
   z-index: 100000;
   border-top: 0.5rem solid var(--color-accent);
 }
 
-.header-home__logo img {
-  width: 2.5rem;
+.header-home__title {
+  margin: 0;
 }
 
-.header-home__logo:hover,
-.header-home__logo:focus {
+.header-home__title:hover,
+.header-home__title:focus {
   translate: 0 -0.5rem;
 }
 
