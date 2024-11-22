@@ -438,18 +438,20 @@ body {
 /* ---------- Banner---------- */
 
 .banner .container {
-  min-height: 60vh;
+  min-height: 100vh;
+  min-width: 100%;
+  background-color: gray;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-items: center;
   padding: 2rem;
-  gap: 2rem;
 }
 
 .banner__header {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
   gap: 1rem;
@@ -462,11 +464,22 @@ body {
 }
 
 .banner__title {
-  line-height: 1.3;
-  color: var(--color-font);
-  white-space: nowrap;
-  overflow: hidden;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 1s steps(40, end),
+    blink-caret .75s step-end infinite;
 }
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
+
 
 .banner__text {
   padding-top: 1rem;
